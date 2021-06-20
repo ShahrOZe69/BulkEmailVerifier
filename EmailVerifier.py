@@ -108,7 +108,7 @@ def checkMX(domain):
 
 
 def checkEmail(email,proxy):
-	URL=f'https://verify-email.org/home/verify-as-guest/{email}'
+	URL=f'https://xxxx.xxx/{email}'
 	response=requests.get(URL,proxies={"http":f"http://{proxy}","https": f"http://{proxy}"},timeout=30,verify=False)
 	if response.content.decode()=='"You have reached the limit of 5 emails per hour"' or response.status_code!=200:
 		return False	
